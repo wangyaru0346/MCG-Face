@@ -1,0 +1,7 @@
+torch
+torch-geometric
+numpy
+scipy
+trimesh
+tqdm
+quad-mesh-simplify
