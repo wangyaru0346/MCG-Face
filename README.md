@@ -54,8 +54,6 @@ Due to size limitations on GitHub, the ```checkpoints/``` directory (including t
 
 - **Baidu Netdisk**: [https://pan.baidu.com/s/157O3JuLoVzvJYRjanNk3xw?pwd=6688] (Extraction Code: [6688])
 
-- **Direct Download**: (Optional: Insert Google Drive link for international reviewers)
-
 **Note**: Please ensure the ```checkpoints/``` folder is placed in the project root before running the scripts.
 ## Usage
 ### Training
