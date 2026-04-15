@@ -1,5 +1,7 @@
 # Robust 3D Face Reconstruction under Arbitrary Missing Data via Multi-Constraint Guidance
 
+DOI: https://doi.org/10.5281/zenodo.19595194
+
 This repository contains the official implementation of the research paper:  
 **"Robust 3D Face Reconstruction under Arbitrary Missing Data via Multi-Constraint Guidance"** Currently **under review** at **The Visual Computer**.
 
@@ -79,6 +81,7 @@ If you find our work or code helpful, please cite:
   author={Wang, Yaru and Wu, Dongsheng and Cheng, Yifan and Niu, Qianqian and Wang, Xin and Zhou, Zhijie},
   journal={Submitted to The Visual Computer},
   year={2026},
+  doi={10.5281/zenodo.19595194},
   note={Under review}
 }
 ```
