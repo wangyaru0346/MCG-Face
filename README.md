@@ -6,7 +6,7 @@ This repository contains the official implementation of the research paper:
 **"Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans"** Currently **under review** at **The Visual Computer**.
 
 ## Introduction
-This project introduces **MCG-Face**, a multi-constraint guided framework for reconstructing complete 3D facial geometry from arbitrarily incomplete scans. The method combines a pre-trained graph-convolutional facial shape generator with constrained latent-space optimization, observed-region 3D shape matching, 2D global visual guidance, local semantic geometric distribution guidance, and scan-consistent refinement. Our method addresses the challenge of reconstructing faces with arbitrary missing data or irregular defects by leveraging **Graph Convolutional Networks (GCN)** and a **Multi-Constraint Guided** optimization strategy. It ensures both global structural robustness and local geometric accuracy.
+This project introduces **MCG-Face**, a multi-constraint guided framework for reconstructing complete 3D facial geometry from arbitrarily incomplete scans. The method combines a pre-trained graph-convolutional facial shape generator with constrained latent-space optimization, observed-region 3D shape matching, 2D global visual guidance, local semantic geometric distribution guidance, and scan-consistent refinement. Our method addresses the challenge of reconstructing faces with arbitrary missing data or irregular defects by leveraging **Graph Convolutional Networks (GCN)** and a **Multi-Constraint Guided** optimization strategy. It aims to improve both global structural plausibility and local geometric accuracy.
 
 ## Repository Structure
 ```text
@@ -49,6 +49,8 @@ pip install https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py310_cu12
 ## Dataset & Checkpoints
 ### FaceScape Dataset
 We utilize the FaceScape dataset for our research.
+### FaMoS Dataset
+We also use the FaMoS dataset for validation and evaluation. Please obtain the dataset from the original dataset providers and comply with its license terms.
 
 - **Access**: Due to license restrictions, we cannot distribute the raw data. Please apply for authorized access at the FaceScape Official Site.
 
@@ -81,11 +83,11 @@ The script ```pipeline.py``` prepares representative evaluation folders and meta
 ```
 python scripts/evaluation/pipeline.py \
     --processed_dir data/processed_masks \
-    --source_result_dir results_comparison_more30 \
     --output_dir results_comparison_more40 \
     --num_cases 40 \
     --start_index 801
 ```
+If previous result folders are available, they can be provided using `--source_result_dir`.
 Expected output structure:
 ```text
 results_comparison_more40/
@@ -118,6 +120,9 @@ ours_missing_ratio_breakdown.csv
 ours_missing_pattern_breakdown.csv
 ```
 Please modify dataset paths and result paths according to your local environment. Restricted raw facial scans are not redistributed in this repository.
+## Data and Ethical Use
+This repository does not redistribute restricted raw 3D facial scans. Users should obtain FaceScape, FaMoS, or other datasets from the original dataset providers and comply with the corresponding license terms.
+The released code and models are intended for academic and reproducible research on 3D facial geometry completion and surface reconstruction. They should not be used for surveillance, identity tracking, or unauthorized biometric reconstruction.
 ## Citation
 If you find our work or code helpful, please cite:
 ```
@@ -131,8 +136,8 @@ If you find our work or code helpful, please cite:
 }
 ```
 ## Contact
-Yaru Wang (First Author): [18766270346@163.com]
+Yaru Wang (First Author): <18766270346@163.com>
 
-Dongsheng Wu (Principal Corresponding Author): [wuds@sylu.edu.cn]
+Dongsheng Wu (Principal Corresponding Author): <wuds@sylu.edu.cn>
 
-Yifan Chen  (Corresponding Author): [yifan.chen@port.ac.uk]
+Yifan Chen (Corresponding Author): <yifan.chen@port.ac.uk>
