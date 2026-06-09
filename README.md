@@ -1,9 +1,9 @@
-# Robust 3D Face Reconstruction under Arbitrary Missing Data via Multi-Constraint Guidance
+# Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans
 
 DOI: https://doi.org/10.5281/zenodo.19595194
 
 This repository contains the official implementation of the research paper:  
-**"Robust 3D Face Reconstruction under Arbitrary Missing Data via Multi-Constraint Guidance"** Currently **under review** at **The Visual Computer**.
+**"Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans"** Currently **under review** at **The Visual Computer**.
 
 ## Introduction
 This project introduces **MCG-Face**, a systemic framework designed for high-fidelity 3D facial reconstruction. Our method addresses the challenge of reconstructing faces with arbitrary missing data or irregular defects by leveraging **Graph Convolutional Networks (GCN)** and a **Multi-Constraint Guided** optimization strategy. It ensures both global structural robustness and local geometric accuracy.
