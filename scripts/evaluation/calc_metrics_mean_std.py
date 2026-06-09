@@ -1,42 +1,3 @@
-```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Compute reconstruction metrics for MCG-Face evaluation.
-
-This script computes CD, HD, and RMSE for each reconstruction method and reports:
-1. Per-sample metrics
-2. Mean ± standard deviation for each method
-3. Missing-ratio breakdown for MCG-Face
-4. Missing-pattern breakdown for MCG-Face
-
-Expected folder structure:
-
-results_comparison_more40/
-├── result_mask_801/
-│   ├── 0_ground_truth.obj
-│   ├── baseline_geometric.obj
-│   ├── baseline_mean.obj
-│   ├── baseline_stage1.obj
-│   ├── baseline_symmetry.obj
-│   └── 2_reconstructed.obj
-├── result_mask_802/
-│   └── ...
-└── missing_metadata.csv   # optional
-
-Usage:
-
-python scripts/evaluation/calc_metrics_mean_std.py \
-    --result_dir results_comparison_more40 \
-    --scale 100.0
-
-Notes:
-- CD and HD are computed using bidirectional nearest-neighbor distances.
-- RMSE is computed as point-wise vertex error and requires the same vertex correspondence.
-- The default scale is 100.0, which converts normalized mesh-unit errors to millimeter-like values
-  if the meshes are stored in the normalized coordinate system used in MCG-Face.
-"""
-
 import argparse
 import os
 from pathlib import Path
@@ -445,4 +406,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-```
