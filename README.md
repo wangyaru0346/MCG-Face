@@ -103,6 +103,7 @@ results_comparison_more40/
 │   └── ...
 └── missing_metadata.csv
 ```
+The folder names such as `result_mask_80x` are example names for organized evaluation cases and do not need to correspond to the single demo file in `examples/`.
 The geometric baseline generation in ```pipeline.py``` is provided as a fallback and can be replaced by a project-specific geometric filling implementation.
 
 ### Compute quantitative metrics
