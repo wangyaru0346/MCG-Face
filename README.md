@@ -1,6 +1,6 @@
 # Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans
 
-DOI: https://doi.org/10.5281/zenodo.19595194
+DOI: https://doi.org/10.5281/zenodo.20607879
 
 This repository contains the official implementation of the research paper:  
 **"Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans"** Currently **under review** at **The Visual Computer**.
@@ -132,7 +132,7 @@ If you find our work or code helpful, please cite:
   author={Wang, Yaru and Wu, Dongsheng and Chen, Yifan and Niu, Qianqian and Wang, Xin and Zhou, Zhijie},
   journal={Submitted to The Visual Computer},
   year={2026},
-  doi={10.5281/zenodo.19595194},
+  doi={10.5281/zenodo.20607879},
   note={Under review}
 }
 ```
