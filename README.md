@@ -75,9 +75,8 @@ To run the ablation studies described in the paper:
 ```
 python ablation_study.py
 ```
-Additional scripts for the revised quantitative evaluation are provided in ```scripts/evaluation/```.
-
-Prepare representative evaluation folders
+### Additional scripts for the revised quantitative evaluation are provided in ```scripts/evaluation/```.
+### Prepare representative evaluation folders
 The script ```pipeline.py``` prepares representative evaluation folders and metadata for the revised quantitative comparison. It organizes the required files for each test case, including ground truth meshes, incomplete inputs, reconstructed results, and baseline outputs when available.
 ```
 python scripts/evaluation/pipeline.py \
@@ -104,7 +103,7 @@ results_comparison_more40/
 ```
 The geometric baseline generation in ```pipeline.py``` is provided as a fallback and can be replaced by a project-specific geometric filling implementation.
 
-Compute quantitative metrics
+### Compute quantitative metrics
 The script ```calc_metrics.py``` computes Chamfer Distance (CD), Hausdorff Distance (HD), and RMSE for reconstructed 3D facial meshes. It reports per-sample metrics, mean and standard deviation for each method, and missing-ratio / missing-pattern breakdowns for MCG-Face.
 ```
 python scripts/evaluation/calc_metrics.py \
