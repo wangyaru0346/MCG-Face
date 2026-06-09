@@ -6,7 +6,7 @@ This repository contains the official implementation of the research paper:
 **"Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans"** Currently **under review** at **The Visual Computer**.
 
 ## Introduction
-This project introduces **MCG-Face**, a systemic framework designed for high-fidelity 3D facial reconstruction. Our method addresses the challenge of reconstructing faces with arbitrary missing data or irregular defects by leveraging **Graph Convolutional Networks (GCN)** and a **Multi-Constraint Guided** optimization strategy. It ensures both global structural robustness and local geometric accuracy.
+This project introduces **MCG-Face**, a multi-constraint guided framework for reconstructing complete 3D facial geometry from arbitrarily incomplete scans. The method combines a pre-trained graph-convolutional facial shape generator with constrained latent-space optimization, observed-region 3D shape matching, 2D global visual guidance, local semantic geometric distribution guidance, and scan-consistent refinement. Our method addresses the challenge of reconstructing faces with arbitrary missing data or irregular defects by leveraging **Graph Convolutional Networks (GCN)** and a **Multi-Constraint Guided** optimization strategy. It ensures both global structural robustness and local geometric accuracy.
 
 ## Repository Structure
 ```text
@@ -121,9 +121,9 @@ Please modify dataset paths and result paths according to your local environment
 ## Citation
 If you find our work or code helpful, please cite:
 ```
-@article{Wang2026Robust3DFace,
-  title={Robust 3D Face Reconstruction under Arbitrary Missing Data via Multi-Constraint Guidance},
-  author={Wang, Yaru and Wu, Dongsheng and Cheng, Yifan and Niu, Qianqian and Wang, Xin and Zhou, Zhijie},
+@article{Wang2026MCGFace,
+  title={Multi-Constraint Guided Reconstruction of Complete 3D Facial Geometry from Arbitrarily Incomplete Scans},
+  author={Wang, Yaru and Wu, Dongsheng and Chen, Yifan and Niu, Qianqian and Wang, Xin and Zhou, Zhijie},
   journal={Submitted to The Visual Computer},
   year={2026},
   doi={10.5281/zenodo.19595194},
