@@ -75,6 +75,50 @@ To run the ablation studies described in the paper:
 ```
 python ablation_study.py
 ```
+Additional scripts for the revised quantitative evaluation are provided in ```scripts/evaluation/```.
+
+Prepare representative evaluation folders
+The script ```pipeline.py``` prepares representative evaluation folders and metadata for the revised quantitative comparison. It organizes the required files for each test case, including ground truth meshes, incomplete inputs, reconstructed results, and baseline outputs when available.
+```
+python scripts/evaluation/pipeline.py \
+    --processed_dir data/processed_masks \
+    --source_result_dir results_comparison_more30 \
+    --output_dir results_comparison_more40 \
+    --num_cases 40 \
+    --start_index 801
+```
+Expected output structure:
+```text
+results_comparison_more40/
+├── result_mask_801/
+│   ├── 0_ground_truth.obj
+│   ├── 1_input_hole.obj
+│   ├── 2_reconstructed.obj
+│   ├── baseline_stage1.obj
+│   ├── baseline_symmetry.obj
+│   ├── baseline_mean.obj
+│   └── baseline_geometric.obj
+├── result_mask_802/
+│   └── ...
+└── missing_metadata.csv
+```
+The geometric baseline generation in ```pipeline.py``` is provided as a fallback and can be replaced by a project-specific geometric filling implementation.
+
+Compute quantitative metrics
+The script ```calc_metrics.py``` computes Chamfer Distance (CD), Hausdorff Distance (HD), and RMSE for reconstructed 3D facial meshes. It reports per-sample metrics, mean and standard deviation for each method, and missing-ratio / missing-pattern breakdowns for MCG-Face.
+```
+python scripts/evaluation/calc_metrics.py \
+    --result_dir results_comparison_more40 \
+    --scale 100.0
+```
+The script exports:
+```
+metrics_per_sample.csv
+metrics_mean_std.csv
+ours_missing_ratio_breakdown.csv
+ours_missing_pattern_breakdown.csv
+```
+Please modify dataset paths and result paths according to your local environment. Restricted raw facial scans are not redistributed in this repository.
 ## Citation
 If you find our work or code helpful, please cite:
 ```
