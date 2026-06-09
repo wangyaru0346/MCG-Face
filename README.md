@@ -13,6 +13,10 @@ This project introduces **MCG-Face**, a systemic framework designed for high-fid
 .
 ├── config/                # Configuration files (.py and .cfg)
 ├── examples/              # Sample 3D data (e.g., mask_610.obj) for testing
+├── scripts/
+│   └── evaluation/
+│       ├── pipeline.py    # Prepare representative evaluation folders and metadata
+│       └── calc_metrics.py # Compute CD, HD, RMSE, mean/std, and missing-ratio breakdowns
 ├── ablation_study.py      # Script for reproducing ablation experiments
 ├── baselines.py           # Implementation of comparison methods
 ├── extra_baselines.py     # Additional comparative models
